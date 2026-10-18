@@ -3,6 +3,7 @@ import Testing
 
 @testable import MDViewer
 
+/// Markdownの主要ブロック記法が表示モデルへ変換されることを検証する。
 struct MarkdownParserTests {
   let parser = MarkdownParser()
   @Test func headingsAndParagraphs() {
@@ -23,6 +24,7 @@ struct MarkdownParserTests {
   @Test func empty() { #expect(parser.parse("").isEmpty) }
 }
 
+/// 履歴ストアの並べ替えと件数制限が永続化後も維持されることを検証する。
 @MainActor struct RecentStoreTests {
   @Test func newestFirstAndLimit() throws {
     let name = "test.\(UUID())"
