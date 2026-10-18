@@ -48,22 +48,6 @@ MDViewerは、iPhoneの「ファイル」アプリからMarkdownファイルを�
 
 外部ライブラリ、WebView、JavaScript、Firebaseは使用していません。
 
-## プロジェクトを開く
-
-```bash
-git clone https://github.com/michi-develop/MDViewer.git
-cd MDViewer
-open MDViewer.xcodeproj
-```
-
-コミット済みの `MDViewer.xcodeproj` をそのまま利用できます。プロジェクト定義を変更した場合は、XcodeGenで再生成できます。
-
-```bash
-xcodegen generate
-```
-
-通常のビルドにXcodeGenは必要ありません。
-
 ## シミュレータで実行する
 
 1. Xcodeで `MDViewer.xcodeproj` を開きます。
@@ -72,31 +56,9 @@ xcodegen generate
 4. `Run`（`⌘R`）を実行します。
 5. アプリ右上の `+` からMarkdownファイルを選択します。
 
-## iPhone実機で実行する
-
-1. データ通信対応ケーブルでiPhoneをMacへ接続します。
-2. iPhoneをロック解除し、「このコンピュータを信頼」を許可します。
-3. iPhoneの「設定 → プライバシーとセキュリティ → デベロッパモード」を有効にします。
-4. Xcodeでプロジェクトの `MDViewer` ターゲットを選択します。
-5. `Signing & Capabilities` の `Team` に自分のApple Development Teamを設定します。
-6. 実行先に接続したiPhoneを選択します。
-7. `Run`（`⌘R`）を実行します。
-
-初回起動時にiPhone側で開発者の信頼が必要になる場合があります。その場合は、端末に表示される案内に従って許可してください。
-
 ## テスト
 
-テストにはSwift Testingを使用しています。XcodeのTest Navigator、または次のコマンドで実行できます。
-
-```bash
-xcodebuild \
-  -project MDViewer.xcodeproj \
-  -scheme MDViewer \
-  -destination 'platform=iOS Simulator,name=iPhone 17 Pro Max' \
-  test
-```
-
-シミュレータ名は、インストールされているランタイムに合わせて変更してください。
+テストにはSwift Testingを使用しています。
 
 ## ファイルアクセスとプライバシー
 
