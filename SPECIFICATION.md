@@ -15,7 +15,7 @@ MDViewerは、iOS標準のファイルピッカーでユーザーが選択した
 - ファイル種別: `UniformTypeIdentifiers.UTType`
 - 外部ファイル再アクセス: Security-Scoped Bookmark
 - 非同期処理: Swift Concurrency（`async` / `await`）
-- テスト: XCTest
+- テスト: Swift Testing
 - 外部依存: なし
 
 ## 3. 画面構成
@@ -295,4 +295,3 @@ enum AppError: LocalizedError {
 ## 13. 実装対象外と将来拡張候補
 
 初期実装では要件定義書の対象外項目を実装しない。将来的な候補として、表・画像・タスクリスト対応、共有、全文検索、お気に入りを検討できるが、初期アーキテクチャに過度な抽象化は持ち込まない。
-
